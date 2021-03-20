@@ -389,23 +389,6 @@ Aquarium.Game.prototype = {
 				fish.position.x = fish.position.x - fish.fishSpeed;
 				}
 
-			if (fish.scale.x==1 && fish.angle==20)
-				{
-				fish.position.y = fish.position.y + fish.fishSpeed / 2;
-				}
-			else if (fish.scale.x==1 && fish.angle==-20)
-				{
-				fish.position.y = fish.position.y - fish.fishSpeed / 2;
-				}
-			else if (fish.scale.x==-1 && fish.angle==20)
-				{
-				fish.position.y = fish.position.y - fish.fishSpeed / 2;
-				}
-			else if (fish.scale.x==-1 && fish.angle==-20)
-				{
-				fish.position.y = fish.position.y + fish.fishSpeed / 2;
-				}
-
 			// CHECKING IF THE FISH IS NOT VISIBLE (RIGHT SIDE)
 			if (fish.position.x>650)
 				{
@@ -456,6 +439,16 @@ Aquarium.Game.prototype = {
 
 				// CHANGING THE FISH Y POSITION TO A RANDOM VALUE
 				fish.position.y = this.getRandomY();
+				}
+
+			// CHECKING THE FISH SCALE AND ANGLE AND MOVING UP OR DOWN ACCORDINGLY
+			if ((fish.scale.x==1 && fish.angle==20) || (fish.scale.x==-1 && fish.angle==-20))
+				{
+				fish.position.y = fish.position.y + fish.fishSpeed / 2;
+				}
+			else if ((fish.scale.x==1 && fish.angle==-20) || (fish.scale.x==-1 && fish.angle==20))
+				{
+				fish.position.y = fish.position.y - fish.fishSpeed / 2;
 				}
 			}
 
