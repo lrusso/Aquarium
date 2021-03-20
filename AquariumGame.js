@@ -82,6 +82,13 @@ Aquarium.Game = function (game)
 	this.fish3 = null;
 	this.fish4 = null;
 	this.fish5 = null;
+	this.fish6 = null;
+	this.fish7 = null;
+	this.fish8 = null;
+	this.fish9 = null;
+	this.fish10 = null;
+	this.fish11 = null;
+	this.fish12 = null;
 	this.fishes = null;
 	this.fishFaster = null;
 
@@ -118,6 +125,13 @@ Aquarium.Game.prototype = {
 		this.fish3 = null;
 		this.fish4 = null;
 		this.fish5 = null;
+		this.fish6 = null;
+		this.fish7 = null;
+		this.fish8 = null;
+		this.fish9 = null;
+		this.fish10 = null;
+		this.fish11 = null;
+		this.fish12 = null;
 		this.fishes = [];
 		this.fishFaster = 2;
 
@@ -153,10 +167,13 @@ Aquarium.Game.prototype = {
 		this.bubbles.push(this.bubbles3);
 
 		// ADDING THE FISH 1
-		this.fish1 = game.add.sprite(-70, 10, "imageFish1");
+		this.fish1 = game.add.sprite(0, 0, "imageFish1");
 		this.fish1.animations.add("move_left", [0, 1, 2, 3, 2, 1]);
 		this.fish1.animations.play("move_left", 10, true);
 		this.fish1.fishSpeed = 1;
+		this.fish1.position.x = this.getRandomX();
+		this.fish1.position.y = this.getRandomY();
+		this.fish1.angle = this.getRandomAngle();
 		this.fish1.inputEnabled = true;
 		this.fish1.input.useHandCursor = true;
 		this.fish1.events.onInputUp.add(function()
@@ -166,10 +183,13 @@ Aquarium.Game.prototype = {
 		this.fishes.push(this.fish1);
 
 		// ADDING THE FISH 2
-		this.fish2 = game.add.sprite(-130, 80, "imageFish2");
+		this.fish2 = game.add.sprite(0, 0, "imageFish2");
 		this.fish2.animations.add("move_left", [0, 1, 2, 3, 2, 1]);
 		this.fish2.animations.play("move_left", 5, true);
 		this.fish2.fishSpeed = 1;
+		this.fish2.position.x = this.getRandomX();
+		this.fish2.position.y = this.getRandomY();
+		this.fish2.angle = this.getRandomAngle();
 		this.fish2.inputEnabled = true;
 		this.fish2.input.useHandCursor = true;
 		this.fish2.events.onInputUp.add(function()
@@ -179,10 +199,13 @@ Aquarium.Game.prototype = {
 		this.fishes.push(this.fish2);
 
 		// ADDING THE FISH 3
-		this.fish3 = game.add.sprite(-90, 160, "imageFish3");
+		this.fish3 = game.add.sprite(0, 0, "imageFish3");
 		this.fish3.animations.add("move_left", [0, 1, 2, 3, 2, 1]);
 		this.fish3.animations.play("move_left", 5, true);
 		this.fish3.fishSpeed = 1;
+		this.fish3.position.x = this.getRandomX();
+		this.fish3.position.y = this.getRandomY();
+		this.fish3.angle = this.getRandomAngle();
 		this.fish3.inputEnabled = true;
 		this.fish3.input.useHandCursor = true;
 		this.fish3.events.onInputUp.add(function()
@@ -192,10 +215,13 @@ Aquarium.Game.prototype = {
 		this.fishes.push(this.fish3);
 
 		// ADDING THE FISH 4
-		this.fish4 = game.add.sprite(-130, 250, "imageFish4");
+		this.fish4 = game.add.sprite(0, 0, "imageFish4");
 		this.fish4.animations.add("move_left", [0, 1, 2, 3, 2, 1]);
 		this.fish4.animations.play("move_left", 5, true);
 		this.fish4.fishSpeed = 1;
+		this.fish4.position.x = this.getRandomX();
+		this.fish4.position.y = this.getRandomY();
+		this.fish4.angle = this.getRandomAngle();
 		this.fish4.inputEnabled = true;
 		this.fish4.input.useHandCursor = true;
 		this.fish4.events.onInputUp.add(function()
@@ -205,10 +231,13 @@ Aquarium.Game.prototype = {
 		this.fishes.push(this.fish4);
 
 		// ADDING THE FISH 5
-		this.fish5 = game.add.sprite(-90, 300, "imageFish5");
+		this.fish5 = game.add.sprite(0, 0, "imageFish5");
 		this.fish5.animations.add("move_left", [0, 1, 2, 3, 2, 1]);
 		this.fish5.animations.play("move_left", 5, true);
 		this.fish5.fishSpeed = 1;
+		this.fish5.position.x = this.getRandomX();
+		this.fish5.position.y = this.getRandomY();
+		this.fish5.angle = this.getRandomAngle();
 		this.fish5.inputEnabled = true;
 		this.fish5.input.useHandCursor = true;
 		this.fish5.events.onInputUp.add(function()
@@ -218,10 +247,13 @@ Aquarium.Game.prototype = {
 		this.fishes.push(this.fish5);
 
 		// ADDING THE FISH 6
-		this.fish6 = game.add.sprite(-90, 350, "imageFish6");
+		this.fish6 = game.add.sprite(0, 0, "imageFish6");
 		this.fish6.animations.add("move_left", [0, 1, 2, 3, 2, 1]);
 		this.fish6.animations.play("move_left", 5, true);
 		this.fish6.fishSpeed = 1;
+		this.fish6.position.x = this.getRandomX();
+		this.fish6.position.y = this.getRandomY();
+		this.fish6.angle = this.getRandomAngle();
 		this.fish6.inputEnabled = true;
 		this.fish6.input.useHandCursor = true;
 		this.fish6.events.onInputUp.add(function()
@@ -229,6 +261,102 @@ Aquarium.Game.prototype = {
 			this.fish6.fishSpeed = this.fishFaster;
 			},this);
 		this.fishes.push(this.fish6);
+
+		// ADDING THE FISH 7
+		this.fish7 = game.add.sprite(0, 0, "imageFish1");
+		this.fish7.animations.add("move_left", [0, 1, 2, 3, 2, 1]);
+		this.fish7.animations.play("move_left", 10, true);
+		this.fish7.fishSpeed = 1;
+		this.fish7.position.x = this.getRandomX();
+		this.fish7.position.y = this.getRandomY();
+		this.fish7.angle = this.getRandomAngle();
+		this.fish7.inputEnabled = true;
+		this.fish7.input.useHandCursor = true;
+		this.fish7.events.onInputUp.add(function()
+			{
+			this.fish7.fishSpeed = this.fishFaster;
+			},this);
+		this.fishes.push(this.fish7);
+
+		// ADDING THE FISH 8
+		this.fish8 = game.add.sprite(0, 0, "imageFish2");
+		this.fish8.animations.add("move_left", [0, 1, 2, 3, 2, 1]);
+		this.fish8.animations.play("move_left", 5, true);
+		this.fish8.fishSpeed = 1;
+		this.fish8.position.x = this.getRandomX();
+		this.fish8.position.y = this.getRandomY();
+		this.fish8.angle = this.getRandomAngle();
+		this.fish8.inputEnabled = true;
+		this.fish8.input.useHandCursor = true;
+		this.fish8.events.onInputUp.add(function()
+			{
+			this.fish8.fishSpeed = this.fishFaster;
+			},this);
+		this.fishes.push(this.fish8);
+
+		// ADDING THE FISH 9
+		this.fish9 = game.add.sprite(0, 0, "imageFish3");
+		this.fish9.animations.add("move_left", [0, 1, 2, 3, 2, 1]);
+		this.fish9.animations.play("move_left", 5, true);
+		this.fish9.fishSpeed = 1;
+		this.fish9.position.x = this.getRandomX();
+		this.fish9.position.y = this.getRandomY();
+		this.fish9.angle = this.getRandomAngle();
+		this.fish9.inputEnabled = true;
+		this.fish9.input.useHandCursor = true;
+		this.fish9.events.onInputUp.add(function()
+			{
+			this.fish9.fishSpeed = this.fishFaster;
+			},this);
+		this.fishes.push(this.fish9);
+
+		// ADDING THE FISH 10
+		this.fish10 = game.add.sprite(0, 0, "imageFish4");
+		this.fish10.animations.add("move_left", [0, 1, 2, 3, 2, 1]);
+		this.fish10.animations.play("move_left", 5, true);
+		this.fish10.fishSpeed = 1;
+		this.fish10.position.x = this.getRandomX();
+		this.fish10.position.y = this.getRandomY();
+		this.fish10.angle = this.getRandomAngle();
+		this.fish10.inputEnabled = true;
+		this.fish10.input.useHandCursor = true;
+		this.fish10.events.onInputUp.add(function()
+			{
+			this.fish10.fishSpeed = this.fishFaster;
+			},this);
+		this.fishes.push(this.fish10);
+
+		// ADDING THE FISH 11
+		this.fish11 = game.add.sprite(0, 0, "imageFish5");
+		this.fish11.animations.add("move_left", [0, 1, 2, 3, 2, 1]);
+		this.fish11.animations.play("move_left", 5, true);
+		this.fish11.fishSpeed = 1;
+		this.fish11.position.x = this.getRandomX();
+		this.fish11.position.y = this.getRandomY();
+		this.fish11.angle = this.getRandomAngle();
+		this.fish11.inputEnabled = true;
+		this.fish11.input.useHandCursor = true;
+		this.fish11.events.onInputUp.add(function()
+			{
+			this.fish11.fishSpeed = this.fishFaster;
+			},this);
+		this.fishes.push(this.fish11);
+
+		// ADDING THE FISH 12
+		this.fish12 = game.add.sprite(0, 0, "imageFish6");
+		this.fish12.animations.add("move_left", [0, 1, 2, 3, 2, 1]);
+		this.fish12.animations.play("move_left", 5, true);
+		this.fish12.fishSpeed = 1;
+		this.fish12.position.x = this.getRandomX();
+		this.fish12.position.y = this.getRandomY();
+		this.fish12.angle = this.getRandomAngle();
+		this.fish12.inputEnabled = true;
+		this.fish12.input.useHandCursor = true;
+		this.fish12.events.onInputUp.add(function()
+			{
+			this.fish12.fishSpeed = this.fishFaster;
+			},this);
+		this.fishes.push(this.fish12);
 
 		// CHECKING IF THE ABOUT TOAST MUST BE DISPLAYED
 		if (this.toast==true)
@@ -261,27 +389,65 @@ Aquarium.Game.prototype = {
 				fish.position.x = fish.position.x - fish.fishSpeed;
 				}
 
+			if (fish.scale.x==1 && fish.angle==20)
+				{
+				fish.position.y = fish.position.y + fish.fishSpeed / 2;
+				}
+			else if (fish.scale.x==1 && fish.angle==-20)
+				{
+				fish.position.y = fish.position.y - fish.fishSpeed / 2;
+				}
+			else if (fish.scale.x==-1 && fish.angle==20)
+				{
+				fish.position.y = fish.position.y - fish.fishSpeed / 2;
+				}
+			else if (fish.scale.x==-1 && fish.angle==-20)
+				{
+				fish.position.y = fish.position.y + fish.fishSpeed / 2;
+				}
+
 			// CHECKING IF THE FISH IS NOT VISIBLE (RIGHT SIDE)
 			if (fish.position.x>650)
 				{
 				// RESTORING THE ORIGINAL FISH SPEED
 				fish.fishSpeed = 1;
 
+				fish.position.y = this.getRandomY();
+
 				// CHANGING THE FISH ORIENTATION
 				fish.scale.x = -1;
+
+				fish.angle = this.getRandomAngle();
 				}
 
 			// CHECKING IF THE FISH IS NOT VISIBLE (LEFT SIDE)
-			else if (fish.position.x<-130)
+			else if (fish.position.x<-70)
 				{
 				// RESTORING THE ORIGINAL FISH SPEED
 				fish.fishSpeed = 1;
 
+				fish.position.y = this.getRandomY();
+
 				// CHANGING THE FISH ORIENTATION
 				fish.scale.x = 1;
+
+				fish.angle = this.getRandomAngle();
+				}
+
+			if (fish.position.y<-70)
+				{
+				fish.position.x = -70;
+				fish.position.y = this.getRandomY();
+				}
+
+			if (fish.position.y>650)
+				{
+				fish.position.x = 650;
+				fish.position.y = this.getRandomY();
 				}
 			}
 
+		/*
 		// LOOPING EVERY BUBBLE
 		for (var i=0; i<this.bubbles.length; i++)
 			{
@@ -298,6 +464,35 @@ Aquarium.Game.prototype = {
 				bubble.position.y = 450;
 				}
 			}
+		*/
+		},
+
+	getRandomAngle: function()
+		{
+		var randomValue = Math.floor(Math.random() * 100);
+
+		if (randomValue<30)
+			{
+			return 0;
+			}
+		else if (randomValue<60)
+			{
+			return 20;
+			}
+		else
+			{
+			return -20;
+			}
+		},
+
+	getRandomX: function()
+		{
+		return Math.floor(Math.random() * 500) + 60;
+		},
+
+	getRandomY: function()
+		{
+		return Math.floor(Math.random() * 300) + 60;
 		},
 
 	showToast: function(myText, mustFade)
