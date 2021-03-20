@@ -145,6 +145,7 @@ Aquarium.Game.prototype = {
 		// ADDING THE BACKGROUND IMAGE
 		this.add.sprite(0, 0, "imageBackground");
 
+		// ADDING THE FIRST COLUMN OF BUBBLES
 		for (var i=0;i<9;i++)
 			{
 			var tempBubble = game.add.sprite(this.getRandomBubbleX(1), this.getRandomBubbleY(), "imageBubbles");
@@ -155,6 +156,7 @@ Aquarium.Game.prototype = {
 			this.bubbles.push(tempBubble);
 			}
 
+		// ADDING THE SECOND COLUMN OF BUBBLES
 		for (var i=0;i<9;i++)
 			{
 			var tempBubble = game.add.sprite(this.getRandomBubbleX(2), this.getRandomBubbleY(), "imageBubbles");
@@ -165,6 +167,7 @@ Aquarium.Game.prototype = {
 			this.bubbles.push(tempBubble);
 			}
 
+		// ADDING THE THIRD COLUMN OF BUBBLES
 		for (var i=0;i<9;i++)
 			{
 			var tempBubble = game.add.sprite(this.getRandomBubbleX(3), this.getRandomBubbleY(), "imageBubbles");
