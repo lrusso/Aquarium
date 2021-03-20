@@ -438,14 +438,23 @@ Aquarium.Game.prototype = {
 				fish.angle = this.getRandomAngle();
 				}
 
+			// CHECKING IF THE FISH IS NOT VISIBLE (TOP SIDE)
 			if (fish.position.y<-70)
 				{
+				// MOVING THE FISH TO THE LEFT SIDE
 				fish.position.x = -70;
+
+				// CHANGING THE FISH Y POSITION TO A RANDOM VALUE
 				fish.position.y = this.getRandomY();
 				}
+
+			// CHECKING IF THE FISH IS NOT VISIBLE (BOTTOM SIDE)
 			else if (fish.position.y>650)
 				{
+				// MOVING THE FISH TO THE RIGHT SIDE
 				fish.position.x = 650;
+
+				// CHANGING THE FISH Y POSITION TO A RANDOM VALUE
 				fish.position.y = this.getRandomY();
 				}
 			}
