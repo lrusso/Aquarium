@@ -412,11 +412,13 @@ Aquarium.Game.prototype = {
 				// RESTORING THE ORIGINAL FISH SPEED
 				fish.fishSpeed = 1;
 
-				fish.position.y = this.getRandomY();
-
 				// CHANGING THE FISH ORIENTATION
 				fish.scale.x = -1;
 
+				// CHANGING THE FISH Y POSITION TO A RANDOM VALUE
+				fish.position.y = this.getRandomY();
+
+				// CHANGING THE FISH ANGLE TO A RANDOM VALUE
 				fish.angle = this.getRandomAngle();
 				}
 
@@ -426,11 +428,13 @@ Aquarium.Game.prototype = {
 				// RESTORING THE ORIGINAL FISH SPEED
 				fish.fishSpeed = 1;
 
-				fish.position.y = this.getRandomY();
-
 				// CHANGING THE FISH ORIENTATION
 				fish.scale.x = 1;
 
+				// CHANGING THE FISH Y POSITION TO A RANDOM VALUE
+				fish.position.y = this.getRandomY();
+
+				// CHANGING THE FISH ANGLE TO A RANDOM VALUE
 				fish.angle = this.getRandomAngle();
 				}
 
@@ -439,8 +443,7 @@ Aquarium.Game.prototype = {
 				fish.position.x = -70;
 				fish.position.y = this.getRandomY();
 				}
-
-			if (fish.position.y>650)
+			else if (fish.position.y>650)
 				{
 				fish.position.x = 650;
 				fish.position.y = this.getRandomY();
@@ -469,18 +472,27 @@ Aquarium.Game.prototype = {
 
 	getRandomAngle: function()
 		{
-		var randomValue = Math.floor(Math.random() * 100);
+		// GETTING A RANDOM NUMBER BETWEEN 1 AND 100
+		var randomValue = Math.floor(Math.random() * 99) + 1;
 
-		if (randomValue<30)
+		// CHECKING IF THE RANDOM VALUE IS LOWER THAN 33
+		if (randomValue<33)
 			{
+			// RETURNING A LOOKING FORWARD FISH ANGLE ORIENTATION
 			return 0;
 			}
-		else if (randomValue<60)
+
+		// CHECKING IF THE RANDOM VALUE IS LOWER THAN 66
+		else if (randomValue<66)
 			{
+			// RETURNING A LOOKING DOWN FISH ANGLE ORIENTATION
 			return 20;
 			}
+
+		// CHECKING IF THE RANDOM VALUE IS HIGHER THAN 66
 		else
 			{
+			// RETURNING A LOOKING UP FISH ANGLE ORIENTATION
 			return -20;
 			}
 		},
