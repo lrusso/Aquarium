@@ -193,17 +193,36 @@ Aquarium.Game.prototype = {
 			// GETTING A FISH
 			var fish = this.fishes[i];
 
-			// MOVING THE FISH
-			fish.position.x = fish.position.x + fish.fishSpeed;
+			// CHECKING THE FISH ORIENTATION
+			if (fish.scale.x==1)
+				{
+				// MOVING THE FISH TO THE RIGHT
+				fish.position.x = fish.position.x + fish.fishSpeed;
+				}
+				else
+				{
+				// MOVING THE FISH TO THE LEFT
+				fish.position.x = fish.position.x - fish.fishSpeed;
+				}
 
-			// CHECKING IF THE FISH IS NOT VISIBLE
+			// CHECKING IF THE FISH IS NOT VISIBLE (RIGHT SIDE)
 			if (fish.position.x>650)
 				{
-				// RESTORING THE FISH ORIGINAL POSITION
-				fish.position.x = -70;
-
 				// RESTORING THE FISH ORIGINAL SPEED
 				fish.fishSpeed = 1;
+
+				// CHANGING THE FISH ORIENTATION
+				fish.scale.x = -1;
+				}
+
+			// CHECKING IF THE FISH IS NOT VISIBLE (LEFT SIDE)
+			else if (fish.position.x<-130)
+				{
+				// RESTORING THE FISH ORIGINAL SPEED
+				fish.fishSpeed = 1;
+
+				// CHANGING THE FISH ORIENTATION
+				fish.scale.x = 1;
 				}
 			}
 		},
