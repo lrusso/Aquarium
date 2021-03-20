@@ -7,3 +7,7 @@ Aquarium game developed in JavaScript.
 ## Web:
 
 https://lrusso.github.io/Aquarium/Aquarium.htm
+
+## The sprites were downloaded from:
+
+http://docs.garagegames.com/it2d/official/content/documentation/Tutorials/Aquarium/Fish_Art.zip
