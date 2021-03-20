@@ -473,7 +473,7 @@ Aquarium.Game.prototype = {
 	getRandomAngle: function()
 		{
 		// GETTING A RANDOM NUMBER BETWEEN 1 AND 100
-		var randomValue = Math.floor(Math.random() * 99) + 1;
+		var randomValue = Math.floor(Math.random() * 100) + 1;
 
 		// CHECKING IF THE RANDOM VALUE IS LOWER THAN 33
 		if (randomValue<33)
