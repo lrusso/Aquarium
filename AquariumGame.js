@@ -150,6 +150,7 @@ Aquarium.Game.prototype = {
 		this.bubbles1.scale.x = 0.1;
 		this.bubbles1.scale.y = 0.1;
 		this.bubbles1.alpha = 0.7;
+		this.bubbles1.position.y = this.getRandomBubbleY();
 		this.bubbles.push(this.bubbles1);
 
 		// ADDING THE BUBBLES 2
@@ -157,6 +158,7 @@ Aquarium.Game.prototype = {
 		this.bubbles2.scale.x = 0.1;
 		this.bubbles2.scale.y = 0.1;
 		this.bubbles2.alpha = 0.7;
+		this.bubbles2.position.y = this.getRandomBubbleY();
 		this.bubbles.push(this.bubbles2);
 
 		// ADDING THE BUBBLES 3
@@ -164,6 +166,7 @@ Aquarium.Game.prototype = {
 		this.bubbles3.scale.x = 0.1;
 		this.bubbles3.scale.y = 0.1;
 		this.bubbles3.alpha = 0.7;
+		this.bubbles3.position.y = this.getRandomBubbleY();
 		this.bubbles.push(this.bubbles3);
 
 		// ADDING THE FISH 1
@@ -452,7 +455,6 @@ Aquarium.Game.prototype = {
 				}
 			}
 
-		/*
 		// LOOPING EVERY BUBBLE
 		for (var i=0; i<this.bubbles.length; i++)
 			{
@@ -465,11 +467,16 @@ Aquarium.Game.prototype = {
 			// CHECKING IF THE BUBBLE IS NOT VISIBLE
 			if (bubble.position.y<-150)
 				{
-				// RESTORING THE ORIGINAL BUBBLE POSITION
-				bubble.position.y = 450;
+				// MOVING DOWN THE BUBBLE
+				bubble.position.y = this.getRandomBubbleY();
 				}
 			}
-		*/
+		},
+
+	getRandomBubbleY: function()
+		{
+		// GETTING A RANDOM NUMBER BETWEEN 450 AND 600
+		return Math.floor(Math.random() * 600) + 450;
 		},
 
 	getRandomAngle: function()
