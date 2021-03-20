@@ -417,6 +417,9 @@ Aquarium.Game.prototype = {
 
 				// CHANGING THE FISH Y POSITION TO A RANDOM VALUE
 				fish.position.y = this.getRandomY();
+
+				// RESTORING THE FISH ANGLE
+				fish.angle = 0;
 				}
 
 			// CHECKING IF THE FISH IS NOT VISIBLE (BOTTOM SIDE)
@@ -427,6 +430,9 @@ Aquarium.Game.prototype = {
 
 				// CHANGING THE FISH Y POSITION TO A RANDOM VALUE
 				fish.position.y = this.getRandomY();
+
+				// RESTORING THE FISH ANGLE
+				fish.angle = 0;
 				}
 
 			// CHECKING THE FISH SCALE AND ANGLE AND MOVING UP OR DOWN ACCORDINGLY
