@@ -267,6 +267,7 @@ Aquarium.Game.prototype = {
 		this.fish7.animations.add("move_left", [0, 1, 2, 3, 2, 1]);
 		this.fish7.animations.play("move_left", 10, true);
 		this.fish7.fishSpeed = 1;
+		this.fish7.scale.x = -1;
 		this.fish7.angle = this.getRandomAngle();
 		this.fish7.inputEnabled = true;
 		this.fish7.input.useHandCursor = true;
@@ -281,6 +282,7 @@ Aquarium.Game.prototype = {
 		this.fish8.animations.add("move_left", [0, 1, 2, 3, 2, 1]);
 		this.fish8.animations.play("move_left", 5, true);
 		this.fish8.fishSpeed = 1;
+		this.fish8.scale.x = -1;
 		this.fish8.angle = this.getRandomAngle();
 		this.fish8.inputEnabled = true;
 		this.fish8.input.useHandCursor = true;
@@ -295,6 +297,7 @@ Aquarium.Game.prototype = {
 		this.fish9.animations.add("move_left", [0, 1, 2, 3, 2, 1]);
 		this.fish9.animations.play("move_left", 5, true);
 		this.fish9.fishSpeed = 1;
+		this.fish9.scale.x = -1;
 		this.fish9.angle = this.getRandomAngle();
 		this.fish9.inputEnabled = true;
 		this.fish9.input.useHandCursor = true;
@@ -309,6 +312,7 @@ Aquarium.Game.prototype = {
 		this.fish10.animations.add("move_left", [0, 1, 2, 3, 2, 1]);
 		this.fish10.animations.play("move_left", 5, true);
 		this.fish10.fishSpeed = 1;
+		this.fish10.scale.x = -1;
 		this.fish10.angle = this.getRandomAngle();
 		this.fish10.inputEnabled = true;
 		this.fish10.input.useHandCursor = true;
@@ -323,6 +327,7 @@ Aquarium.Game.prototype = {
 		this.fish11.animations.add("move_left", [0, 1, 2, 3, 2, 1]);
 		this.fish11.animations.play("move_left", 5, true);
 		this.fish11.fishSpeed = 1;
+		this.fish11.scale.x = -1;
 		this.fish11.angle = this.getRandomAngle();
 		this.fish11.inputEnabled = true;
 		this.fish11.input.useHandCursor = true;
@@ -337,6 +342,7 @@ Aquarium.Game.prototype = {
 		this.fish12.animations.add("move_left", [0, 1, 2, 3, 2, 1]);
 		this.fish12.animations.play("move_left", 5, true);
 		this.fish12.fishSpeed = 1;
+		this.fish12.scale.x = -1;
 		this.fish12.angle = this.getRandomAngle();
 		this.fish12.inputEnabled = true;
 		this.fish12.input.useHandCursor = true;
