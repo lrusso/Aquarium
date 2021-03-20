@@ -508,11 +508,13 @@ Aquarium.Game.prototype = {
 
 	getRandomX: function()
 		{
+		// GETTING A RANDOM NUMBER BETWEEN 60 AND 500 (THE GAME WIDTH WITH A MARGIN)
 		return Math.floor(Math.random() * 500) + 60;
 		},
 
 	getRandomY: function()
 		{
+		// GETTING A RANDOM NUMBER BETWEEN 60 AND 300 (THE GAME HEIGHT WITH A MARGIN)
 		return Math.floor(Math.random() * 300) + 60;
 		},
 
